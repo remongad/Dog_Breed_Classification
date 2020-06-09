@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing import image                  
 from tqdm import tqdm
 from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
-from PIL import ImageFile  
+from PIL import ImageFile, Image 
 from tensorflow.keras.applications.resnet50 import ResNet50
 from extract_bottleneck_features import *
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dense
@@ -63,17 +63,13 @@ def Resnet50_preed_predict(img_path):
     return breed.split('.')[1]
 
 def predict_preed(img_path):
-    
+
     is_human = face_detector(img_path)
     is_dog = dog_detector(img_path)
     
     if is_dog:
-        print('Dog Detected')
-        print('The dog preed is: {}'.format(Resnet50_preed_predict(img_path)))
+        return f'Dog Detected: The Dog Breed is: {Resnet50_preed_predict(img_path)}'
     elif is_human:
-        print('Human Detected')
-        print('The Resempling Human preed is: {}'.format(Resnet50_preed_predict(img_path)))
+        return f'Human Detected: The Resempling Human Breed is: {Resnet50_preed_predict(img_path)}'
     else:
-        print('Neither Human Nor Dog')
-
-predict_preed('C:\Personal\dog_preed_classification\Dog_Breed_Classification\images\human1.jpg')
+        return 'Neither Human Nor Dog'

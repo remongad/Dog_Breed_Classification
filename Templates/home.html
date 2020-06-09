@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dog Breed Classifier</title>
+  <body class style="margin:10px;padding:10px">
+    <div>
+          <h2>Dog Breed Detector</h2>
+          <p>Upload an image of Dog or Human? </p>
+      <form action="" method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+      </form>
+    </div>
+    <p style="margin-bottom:4cm;"></p>
+    <div>
+      <h3 id="tables">Result</h3>
+      <div scope="row"> <img width="224" height="224" src="{{imagesource}}" /> </div>
+      <p style="margin-bottom:1cm;"></p>
+      <div> {{label}} </div>
+    </div>
+  </body>
