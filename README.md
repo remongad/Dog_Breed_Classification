@@ -7,7 +7,7 @@ This is the capstone project for the data scientist nanodegree. this project is 
 you can find the flask code in the app.py file which call all necessary files to run the web app and instantiate a local server connection so that you can use it to upload an image and experiement with the web app as much as you want by simply uploading an image from your local computer. You can also have a look at the process by which this deep learning model was created in the python notebook dog_app.ipynb 
 
 ## How it works
-* Clone this repository git lfs clone https://github.com/Andrew-Maged/DSND-Dog-Breed-Classifier
+* Clone this repository git lfs clone https://github.com/remongad/Dog_Breed_Classification.git
 * Open project's directory cd Dog_Breed_Classification
 * Install all necessary dependencies pip install -r requirements.txt
 * Run application python app.py
